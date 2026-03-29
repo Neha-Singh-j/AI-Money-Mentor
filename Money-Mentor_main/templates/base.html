@@ -1,64 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <head>
     <meta charset="UTF-8">
-    <title>Money Mentor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Money Mentor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
 </head>
+
 <body>
-    <div class="main-box">
 
-        <header>
-            <nav class="nav-top">
-                <img src="/static/images/logo.png" class="logo">
-                <img src="/static/images/user-icon.png" class="user">
-        
-        <div class="box-body">
-            <div class="left-box">
-                <h1>Money Mentor</h1>
-                <h3>24 / 7 Customer Assisstance</h3>
-                <p>We provide you with the best financial<br>assisstance designed to your needs.</p>
-                <button class="services">See Services</button>
-            </div>
-            <div class="right-box">
-                <img src="static/images/intranet-chatbot-right.png">
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="chatbox">
-                <div class="chatbox__support">
-                    <div class="chatbox__header">
-                        <div class="chatbox__image--header">
-                           <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
-                        </div>
-                        <div class="chatbox__content--header">
-                            <h4 class="chatbox__heading--header">Chat support</h4>
-                            <p class="chatbox__description--header">Hi, how can I help you?</p>
-                        </div>
-                    </div>
-                    <div class="chatbox__messages">
-                        <div></div>
-                    </div>
-                    <div class="chatbox__footer">
-                        <input type="text" placeholder="Write a message...">
-                        <button class="chatbox__send--footer send__button">Send</button>
-                    </div>
-                </div>
-                <div class="chatbox__button">
-                    <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
-                </div>
-            </div>
+<!-- MAIN WRAPPER -->
+<div class="main-container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>AI Money Mentor</h2>
+        <ul>
+            <li>Home</li>
+            <li>Insights</li>
+            <li>Savings</li>
+            <li>Debt</li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Master your <span>financial</span> future</h1>
+            <p>Your AI-powered finance assistant for smarter decisions.</p>
+            <button id="startBtn">Get Started</button>
         </div>
 
+        <div class="hero-right">
+            <div class="card">
+                <h3>Estimated Net Worth</h3>
+                <p>₹1,42,500</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD SECTION -->
+    <section class="dashboard">
+
+        <div class="box">
+            <h3>Monthly Income</h3>
+            <p>₹80,000</p>
+        </div>
+
+        <div class="box">
+            <h3>Expenses</h3>
+            <p>₹30,000</p>
+        </div>
+
+        <div class="box">
+            <h3>Savings Goal</h3>
+            <p>85% Completed</p>
+        </div>
+
+    </section>
+
+</div> <!-- END MAIN CONTAINER -->
+
+
+<!-- CHATBOT (OUTSIDE MAIN LAYOUT) -->
+<div class="chatbox">
+    <div class="chatbox__support">
+        <div class="chatbox__header">
+            <h4>AI Mentor</h4>
+        </div>
+
+        <div class="chatbox__messages"></div>
+
+        <div class="chatbox__footer">
+            <input type="text" placeholder="Ask anything...">
+            <button class="send__button">Send</button>
+        </div>
     </div>
 
-    <script>
-        $SCRIPT_ROOT = {{request.script_root|tojson}};
-    </script>
-    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <div class="chatbox__button">
+        <button>💬</button>
+    </div>
+</div>
+
+
+<script>
+    $SCRIPT_ROOT = {{request.script_root|tojson}};
+</script>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
 
 </body>
 </html>

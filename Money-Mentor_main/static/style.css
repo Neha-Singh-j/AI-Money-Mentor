@@ -161,3 +161,157 @@ body{
     height: auto;
 }
 
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f6fa;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: white;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    padding: 40px;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 40px;
+}
+
+.hero-left span {
+    color: purple;
+}
+
+.hero-right {
+    width: 50%;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* .box {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+} */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+/* LEFT SIDE */
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.hero-left span {
+    color: purple;
+}
+
+.hero-left p {
+    margin: 20px 0;
+}
+
+.hero-left button {
+    padding: 10px 20px;
+    border: none;
+    background: purple;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+}
+
+/* BOXES */
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}

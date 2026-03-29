@@ -11,18 +11,34 @@ class Chatbox {
     }
 
     display() {
-        const { openButton, chatbox, sendButton } = this.args;
+    const { openButton, chatbox, sendButton } = this.args;
 
-        openButton.addEventListener('click', () => this.toggleState(chatbox));
-        sendButton.addEventListener('click', () => this.onSendButton(chatbox));
+    // Toggle chatbox from icon
+    openButton.addEventListener('click', () => this.toggleState(chatbox));
 
-        const node = chatbox.querySelector('input');
-        node.addEventListener("keyup", ({ key }) => {
-            if (key === "Enter") {
-                this.onSendButton(chatbox);
-            }
+    // Send button
+    sendButton.addEventListener('click', () => this.onSendButton(chatbox));
+
+    // Enter key support
+    const node = chatbox.querySelector('input');
+    node.addEventListener("keyup", ({ key }) => {
+        if (key === "Enter") {
+            this.onSendButton(chatbox);
+        }
+    });
+
+    // 🔥 NEW: Get Started button opens chat
+    const startBtn = document.getElementById("startBtn");
+    if (startBtn) {
+        startBtn.addEventListener("click", () => {
+            this.state = true;
+            chatbox.classList.add('chatbox--active');
+
+            // optional: focus input
+            chatbox.querySelector('input').focus();
         });
     }
+}
 
     toggleState(chatbox) {
         this.state = !this.state;

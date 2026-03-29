@@ -1,68 +1,144 @@
-Money Mentor Financial Advisor Landing Page with Chatbot
+# 💡 Money Mentor Financial Advisor Landing Page with Chatbot
 
-Description 🌱
-Money Mentor is a financial advisor landing page equipped with a chatbot designed to address common financial inquiries. This project illustrates the integration of front-end web development with the Python Flask framework.
+## Description 🌱
+Money Mentor is a simple and practical financial advisor web application designed to help users understand their financial health and plan their future. It combines a clean landing page with a rule-based chatbot that answers common financial queries.
 
-Technology Stack 🪣
-Front-end - HTML, CSS
-Python Frameworks - Flask
-Python Libraries - PyTorch, NLTK
-Programming Languages - Python, JavaScript
+This project focuses on solving real-world problems where people struggle with financial planning due to complexity, high advisor costs, and lack of awareness. Instead of using heavy AI models, the system applies clear financial rules to generate easy-to-understand insights.
 
+---
 
-Screenshots 📸
-![Landing page](<Screenshot 2024-03-17 140327.png>)
-![Bot Working](<Screenshot 2024-03-17 140645.png>)
+## Problem Statement 🚨
+In real life, most people:
+• Do not track their financial health  
+• Do not maintain an emergency fund  
+• Take financial decisions based on random advice  
+• Avoid planning for retirement  
 
+Result:
+• Poor financial stability  
+• No long-term growth  
+• High financial risk  
 
-How to Launch the Website 🚀
-1.Clone the repository to your local machine.
+---
 
-2.Ensure that Anaconda is installed on your device.
+## What This Project Does 🎯
+Money Mentor:
+• Takes basic financial inputs from the user  
+• Applies simple financial rules  
+• Generates instant insights and recommendations  
+• Provides chatbot support for guidance  
 
-3.Navigate to the cloned repository directory in your command prompt/terminal and install the required frameworks and libraries:
+⚠️ Note:  
+This is a rule-based system. It does not predict stock markets or use real-time financial data.
 
+---
 
+## Core Features 🧠
 
-1.)Install Flask framework:
-conda install -c anaconda flask
+### 1. Money Health Score 💰
+Calculates the user’s financial condition based on:
 
+• Emergency Fund  
+• Debt Ratio  
+• Savings Habit  
 
-Activate the Flask environment:
-. venv/bin/activate
+Score is calculated out of 100 and provides insights like:
+• Whether savings are sufficient  
+• Whether debt is risky  
+• Whether spending habits are balanced  
 
+---
 
-2.)Install PyTorch library:
-conda install -c pytorch pytorch
+### 2. FIRE Planner 🔥
+Helps users plan for retirement using a simple approach:
 
+• Calculates required retirement corpus  
+• Estimates monthly investment needed  
+• Suggests basic asset allocation  
 
-3.)Install NLTK toolkit:
-conda install -c anaconda nltk
+---
 
+## System Flow 🔄
 
-4.)After NLTK is downloaded, launch the Python terminal:
-python
+User Input (Form)  
+↓  
+Data Validation  
+↓  
+Financial Calculations (Rule-Based Logic)  
+↓  
+Result Generation  
+↓  
+Display Output + Chatbot Response  
 
+---
 
-5.)In the Python terminal, import the NLTK toolkit:
-import nltk
-nltk.download('punkt')
+## Working Flow 🚀
 
+1. User opens the website  
+2. Enters financial details  
+3. Clicks "Analyze"  
+4. System calculates:
+   • Financial Score  
+   • Retirement Plan  
+5. Results are displayed instantly  
+6. Chatbot assists with additional queries  
 
-Close the Python terminal and return to the cloned repository directory in the terminal.
+---
 
-6.)Train the chatbot:
-python train.py
+## Logic Used 🧩
 
+### Financial Score Calculation
+Total Score = Emergency Fund + Debt Health + Savings Habit (out of 100)
 
-7.)Finally, launch the website:
-python app.py
+• Emergency Fund:
+  Required = 6 × monthly expenses  
 
+• Debt Health:
+  Debt Ratio = EMI / Income  
 
-Now, your Money Mentor Financial Advisor landing page with the integrated chatbot is ready to assist users with their financial queries!
+• Savings Habit:
+  Savings Ratio = (Income - Expenses) / Income  
 
+---
 
+### Retirement Planning Logic
+• Time to Retirement = Target Age - Current Age  
+• Retirement Corpus ≈ 25 × Annual Expenses  
+• Monthly Investment ≈ Remaining Amount / Months  
+• Asset Allocation:
+  Equity = 100 - Age  
+  Debt = Age  
 
+---
 
+## Technology Stack 🪣
 
+Frontend:
+• HTML  
+• CSS  
 
+Backend:
+• Flask  
+
+Libraries:
+• PyTorch  
+• NLTK  
+
+Languages:
+• Python  
+• JavaScript  
+
+---
+
+## Screenshots 📸
+![Landing page](<Screenshot 2024-03-17 140327.png>)  
+![Bot Working](<Screenshot 2024-03-17 140645.png>)  
+
+---
+
+## How to Run the Project 🚀
+
+### 1. Clone Repository
+```bash
+git clone <your-repository-link>
+cd project-folder

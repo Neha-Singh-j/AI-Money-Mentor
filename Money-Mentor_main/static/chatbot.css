@@ -196,3 +196,38 @@ body {
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.34);
     cursor: pointer;
 }
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chatbox__support {
+    display: none;
+    background: white;
+    width: 300px;
+    height: 400px;
+    flex-direction: column;
+}
+
+.chatbox--active {
+    display: flex;
+}
+
+.chatbox__messages {
+    flex: 1;
+    padding: 10px;
+}
+
+.chatbox__footer {
+    display: flex;
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    
+}
+
+.chatbox__header {
+    background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    padding: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
